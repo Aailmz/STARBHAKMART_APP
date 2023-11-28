@@ -3,9 +3,7 @@ import 'main.dart';
 import 'cart.dart';
 import 'data.dart';
 
-void main() {
-  runApp(MaterialApp(home: InputsApp()),);
-}
+
 class InputsApp extends StatefulWidget {
   const InputsApp({super.key});
 

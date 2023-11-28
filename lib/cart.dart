@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'inputs.dart'; 
-import 'main.dart';
+import 'splash.dart';
 import 'data.dart';
 
-void main() {
-  runApp(MaterialApp(home: CartApp()),);
-}
 class CartApp extends StatefulWidget {
   const CartApp({super.key});
 

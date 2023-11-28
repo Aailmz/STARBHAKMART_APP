@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'main.dart'; 
+import 'splash.dart'; 
 import 'cart.dart';
 import 'inputs.dart';
 
-void main() {
-  runApp(MaterialApp(home: DataApp()),);
-}
 class DataApp extends StatefulWidget {
   const DataApp({super.key});
 
