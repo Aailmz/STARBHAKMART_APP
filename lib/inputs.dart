@@ -89,16 +89,16 @@ class _InputsAppState extends State<InputsApp> {
             children: [
               Text('Nama Produk', style: TextStyle(fontFamily: 'Poppins')),
               Input(title: 'Title 1', hintText: 'Masukkan nama produk'),
-              SizedBox(height: 16.0),
+              SizedBox(height: 3.0),
               Text('Harga', style: TextStyle(fontFamily: 'Poppins')),
               Input(title: 'Title 2', hintText: 'Masukkan harga'),
-              SizedBox(height: 16.0),
+              SizedBox(height: 3.0),
               Text('Kategori', style: TextStyle(fontFamily: 'Poppins')),
-              ColumnInputWithIcon(title: 'Title 3', hintText: 'Makanan', icon: Icons.arrow_drop_down, backgroundColor: Colors.transparent),
-              SizedBox(height: 16.0),
+              ColumnInputWithIcon(title: 'Title 3', hintText: 'Makanan', icon: Icons.arrow_drop_down, backgroundColor: Colors.transparent,),
+              SizedBox(height: 3.0),
               Text('Image', style: TextStyle(fontFamily: 'Poppins')),
               Input(title: 'Title 4', hintText: 'Choose file'),
-              SizedBox(height: 30.0),
+              SizedBox(height: 3.0),
               Submit(),
             ],
           ),
@@ -120,6 +120,7 @@ class Input extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 59.0, // Set the height to 48
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20.0),
@@ -138,7 +139,6 @@ class Input extends StatelessWidget {
           TextField(
             decoration: InputDecoration(
               hintText: hintText,
-              contentPadding: const EdgeInsets.all(8.0),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -182,13 +182,33 @@ class ColumnInputWithIcon extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextField(
+          InputDecorator(
             decoration: InputDecoration(
-              hintText: hintText,
               contentPadding: const EdgeInsets.all(8.0),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
+            ),
+            child: DropdownButton<String>(
+              isExpanded: true,
+              hint: Text(hintText),
+              icon: Icon(icon),
+              underline: Container(), // Remove the underline
+              itemHeight: 48, // Adjust the height as needed
+              value: null, // Provide the selected value if any
+              items: <String>['Makanan', 'Minuman', 'Semua']
+                  .map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(value),
+                  ),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                // Add your onChanged logic here
+              },
             ),
           ),
         ],
@@ -202,7 +222,7 @@ class Submit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: 45,
+        height: 39,
         width: 400,
         child: ElevatedButton(
                       onPressed: () {},
