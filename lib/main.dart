@@ -12,9 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SplashScreen(),
-      routes: {
-        '/home': (context) => HomeScreen(),
-      },
     );
   }
 }
@@ -40,22 +37,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: FlutterLogo(size: 200),
-      ),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Screen'),
-      ),
-      body: Center(
-        child: Text('Welcome to the Home Screen!'),
+        child: Image.asset(
+          'images/STARBHAK.png', // Replace with your image asset path
+          width: 300, // Adjust the width as needed
+          height: 300, // Adjust the height as needed
+        ),
       ),
     );
   }
