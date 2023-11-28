@@ -40,9 +40,9 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(
-          'images/STARBHAK.png', // Replace with your image asset path
-          width: 300, // Adjust the width as needed
-          height: 300, // Adjust the height as needed
+          'images/STARBHAK.png', 
+          width: 300,
+          height: 300, 
         ),
       ),
     );
