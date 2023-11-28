@@ -14,6 +14,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_native_splash: ^1.3.0
 
 flutter:
   uses-material-design: true
@@ -22,6 +23,7 @@ flutter:
   - images/Burger.png
   - images/Cola.png
   - images/All.png
+  - images/STARBHAK.png
 
   fonts:
   - family: Poppins
