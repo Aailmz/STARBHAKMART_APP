@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart'; 
-import 'cart.dart';
 import 'data.dart';
 
 

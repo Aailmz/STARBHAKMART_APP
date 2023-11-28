@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'inputs.dart'; 
 import 'splash.dart';
 import 'data.dart';
 

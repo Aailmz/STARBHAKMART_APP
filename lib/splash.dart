@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'inputs.dart'; 
 import 'cart.dart';
 import 'data.dart';
 
@@ -57,7 +56,6 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     final double appBarHeight = 250.0;
-    Color containerColor = Colors.white;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(appBarHeight),
